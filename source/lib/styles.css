@@ -1,28 +1,30 @@
 /* Made by Aldan Project */
 
-ul {
+/* Navbar style */
+ul.main-menu {
   list-style: none;
   margin: auto;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #3A3A3A;
   width: 65%;
   text-align: center;
+  border-radius: 10px;
 }
 
-li {
+ul.main-menu li {
   float: left;
   font-family: 'Comfortaa', sans-serif;
   font-size: 16px;
   text-transform: uppercase;
-  border-right: 1px solid #BBB;
+  border-right: 1px solid #999999;
 }
 
-li:last-child {
+ul.main-menu li:last-child {
   border-right: none;
 }
 
-li a {
+ul.main-menu li a {
   display: inline-block;
   color: white;
   text-align: center;
@@ -30,11 +32,13 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+ul.main-menu li a:hover {
   background-color: #616161;
 }
+/* Navbar style */
 
-body {
+/* Body style */
+body.blog {
   background-color: #333;
 }
 
@@ -45,3 +49,81 @@ h1 {
   font-family: sans-serif;
   font-size: 42px;
 }
+
+hr {
+  width: 62%;
+}
+/* Body style */
+
+/* Article style */
+article {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  display: block;
+  background-color: #3A3A3A;
+  position: relative;
+  border-radius: 15px;
+  margin-top: 7px;
+}
+
+article.first-article {
+  margin-top: 10px;
+}
+
+article h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  width: auto;
+  font-size: 210%;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+article img {
+  height: 180px;
+  margin: 8px;
+  float: left;
+  border: 3px solid white;
+  border-radius: 12px;
+}
+
+article p {
+  margin-top: 15px;
+  color: #EEEEEE;
+  font-family: arial;
+}
+
+article p a {
+  color: #FF0080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article p a:hover {
+  background-color: white;
+}
+
+article p.read-more {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+article p.read-more a {
+  color: #FF33CC;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 105%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+article p.read-more:hover {
+  background-color: white;
+}
+/* Article style */
