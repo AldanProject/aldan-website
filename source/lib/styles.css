@@ -42,6 +42,26 @@ body.blog {
   background-color: #333;
 }
 
+body.blog p.message {
+  color: white;
+  font-family: 'Comfortaa', sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%; /* Message size */
+  font-size: 120%;
+}
+
+body.blog p.message a {
+  color: #FF0080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body.blog p.message a:hover {
+  background-color: white;
+}
+
 h1 {
   margin-top: 10px;
   margin-bottom: 7px;
@@ -57,7 +77,7 @@ hr {
 /* Body */
 
 /* Article */
-article {
+article.simple-article {
   width: 75%; /* Acticle size/width */
   margin-left: auto;
   margin-right: auto;
@@ -73,7 +93,7 @@ article.first-article {
   margin-top: 10px;
 }
 
-article h2 {
+article.simple-article h2 {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   color: white;
@@ -83,7 +103,7 @@ article h2 {
   margin-bottom: 0;
 }
 
-article img {
+article.simple-article img {
   height: 180px;
   margin: 8px;
   float: left;
@@ -91,23 +111,23 @@ article img {
   border-radius: 12px;
 }
 
-article p {
+article.simple-article p {
   margin-top: 15px;
   color: #EEEEEE;
   font-family: arial;
 }
 
-article p a {
+article.simple-article p a {
   color: #FF0080;
   text-decoration: none;
   font-weight: bold;
 }
 
-article p a:hover {
+article.simple-article p a:hover {
   background-color: white;
 }
 
-article p.read-more {
+article.simple-article p.read-more {
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -115,7 +135,7 @@ article p.read-more {
   margin-bottom: 10px;
 }
 
-article p.read-more a {
+article.simple-article p.read-more a {
   color: #FF33CC;
   text-decoration: none;
   text-transform: uppercase;
@@ -124,7 +144,7 @@ article p.read-more a {
   font-family: 'Montserrat', sans-serif;
 }
 
-article p.read-more:hover {
+article.simple-article p.read-more:hover {
   background-color: white;
 }
 /* Article */
@@ -144,3 +164,57 @@ footer {
   border-radius: 10px;
 }
 /* Footer */
+
+/* Post */
+article.post {
+  width: 75%; /* Acticle size/width */
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  display: block;
+  background-color: #3A3A3A;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+article.post h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+  width: auto;
+  font-size: 210%;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+article.post img {
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+article.post p, center {
+  margin-left: 5%;
+  margin-right: 5%;
+  color: white;
+  font-family: arial;
+  text-align: justify;
+}
+
+article.post center {
+  text-align: center;
+}
+
+article.post p,center a {
+  color: #FF0080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article.post p,center a:hover {
+  background-color: white;
+}
+/* Post */

@@ -15,7 +15,7 @@
     <!-- Navigation bar -->
 
     <!-- Articles section -->
-    <?php include("inc/articles.php"); ?>
+    <?php include("inc/blog_posts.php"); ?>
     <!-- Articles section -->
 
     <!-- Footer -->

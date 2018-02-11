@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.7.4
+- https://www.phpmyadmin.net
+-
+- Servidor: 127.0.0.1:3306
+- Tiempo de generación: 11-02-2018 a las 19:59:26
+- Versión del servidor: 5.7.19
+- Versión de PHP: 5.6.31
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="aldan-project" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="blog_posts">
+                CREATE TABLE `blog_posts` (
+                  `id_post` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                  `title` varchar(35) NOT NULL,
+                  `description` text NOT NULL,
+                  `content` text NOT NULL,
+                  `img` varchar(15) NOT NULL,
+                  PRIMARY KEY (`id_post`),
+                  UNIQUE KEY `id_post` (`id_post`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de datos: 'aldan-project'
+    -->
+    <database name="aldan-project">
+        <!-- Tabla blog_posts -->
+        <table name="blog_posts">
+            <column name="id_post">1</column>
+            <column name="title">TÃ­tulo del primer artÃ­culo</column>
+            <column name="description">Este es el &lt;b&gt;primer&lt;/b&gt; articulo en la pÃ¡gina de &lt;b&gt;Aldan Project&lt;/b&gt;, aquÃ­ puedes insertar informaciÃ³n relacionada sobre el tema que se habla en el articulo.&lt;br&gt;&lt;br&gt; Incluyendo una &lt;b&gt;imagen&lt;/b&gt; que lo acompaÃ±a a su lado izquierdo.&lt;br&gt;&lt;br&gt; Y aquÃ­ hay un &lt;a href=&quot;#&quot;&gt;enlace&lt;/a&gt;. Contiene una clase especÃ­fica para el primer articulo mostrado.</column>
+            <column name="content">&lt;center&gt;EstÃ¡s leyendo el &lt;b&gt;contenido&lt;/b&gt; de la primera publicaciÃ³n en &lt;a href=&quot;#&quot;&gt;Aldan Project&lt;/b&gt;.&lt;/center&gt;</column>
+            <column name="img">blog01</column>
+        </table>
+    </database>
+</pma_xml_export>
