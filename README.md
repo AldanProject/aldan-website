@@ -1,4 +1,4 @@
-# Medal of Darkness - Web page
+# Aldan Project - Website
 
 ### [English | [Español](README_ES.md)]
 
