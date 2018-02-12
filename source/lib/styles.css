@@ -208,13 +208,23 @@ article.post center {
   text-align: center;
 }
 
-article.post p,center a {
+article.post center a {
   color: #FF0080;
   text-decoration: none;
   font-weight: bold;
 }
 
-article.post p,center a:hover {
+article.post center a:hover {
+  background-color: white;
+}
+
+article.post p a {
+  color: #FF0080;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article.post p a:hover {
   background-color: white;
 }
 /* Post */

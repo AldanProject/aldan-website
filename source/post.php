@@ -56,6 +56,7 @@
         echo '<p class="message">La publicación no fue encontrada</p>';
         echo '<p class="message"><a href="index.php">Regresar al inicio</a></p>';
     }
+    mysqli_close($connection);
     ?>
     <!-- Post section -->
 

@@ -16,6 +16,7 @@ else
   if($num != 0)
   {
     write_posts($result);
+    mysqli_close($connection);
   }
   else
   {

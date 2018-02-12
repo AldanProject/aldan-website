@@ -12,5 +12,9 @@ if($connection -> connect_errno)
 {
   echo '<p class="message">Error de conexión</p>';
 }
+else
+{
+  mysqli_set_charset($connection, "utf8");
+}
 
 ?>
