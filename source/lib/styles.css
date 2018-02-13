@@ -6,7 +6,7 @@ ul.main-menu {
   margin: auto;
   padding: 0;
   overflow: hidden;
-  background-color: #3A3A3A;
+  background-color: #494949;
   width: 75%; /* Navbar size/width */
   text-align: center;
   border-radius: 10px;
@@ -83,7 +83,7 @@ article.simple-article {
   margin-right: auto;
   overflow: auto;
   display: block;
-  background-color: #3A3A3A;
+  background-color: #494949;
   position: relative;
   border-radius: 15px;
   margin-top: 5px;
@@ -105,6 +105,7 @@ article.simple-article h2 {
 
 article.simple-article img {
   height: 180px;
+  width: 320px;
   margin: 8px;
   float: left;
   border: 3px solid white;
@@ -160,7 +161,7 @@ footer {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin-top: 10px;
-  background-color: #3A3A3A;
+  background-color: #494949;
   border-radius: 10px;
 }
 /* Footer */
@@ -172,7 +173,7 @@ article.post {
   margin-right: auto;
   overflow: auto;
   display: block;
-  background-color: #3A3A3A;
+  background-color: #494949;
   border-radius: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -189,7 +190,8 @@ article.post h2 {
 }
 
 article.post img {
-  width: 500px;
+  height: 260px;
+  width: 460px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -208,23 +210,13 @@ article.post center {
   text-align: center;
 }
 
-article.post center a {
+article.post p a, center a {
   color: #FF0080;
   text-decoration: none;
   font-weight: bold;
 }
 
-article.post center a:hover {
-  background-color: white;
-}
-
-article.post p a {
-  color: #FF0080;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-article.post p a:hover {
+article.post p a:hover, center a:hover {
   background-color: white;
 }
 /* Post */
@@ -245,7 +237,7 @@ div.login {
 }
 
 form.log-form {
-  background-color: #3A3A3A;
+  background-color: #494949;
   padding: 12px;
   border-radius: 10px;
   border: 2px dotted white;
@@ -311,18 +303,29 @@ div.control-panel {
   display: block;
   border-radius: 10px;
   border: 2px solid white;
-  background-color: #3A3A3A;
+  background-color: #494949;
 }
 
-div.control-panel h2 {
+div.control-panel h2, h3 {
   color: white;
   font-family: 'Comfortaa', sans-serif;
   text-align: center;
 }
 
+div.control-panel h2.main {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+div.control-panel p {
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', arial;
+}
+
 form.new-post t {
   display: block;
-  color: #FF00BF;
+  color: #DD25AF;
   font-family: 'Comfortaa', sans-serif;
   font-weight: bold;
   margin-left: 14px;
@@ -335,6 +338,10 @@ form.new-post t.inline-element {
   margin-bottom: 10px;
 }
 
+form.new-post t.center {
+  text-align: center;
+}
+
 form.new-post input[type=file] {
   display: inline-block;
   margin-left: 7px;
@@ -342,7 +349,7 @@ form.new-post input[type=file] {
   font-family: 'Montserrat', arial;
 }
 
-form.new-post input[type=text], textarea {
+form.new-post input[type=text], input[type=search], textarea {
   margin-left: 8px;
   margin-right: 8px;
   border-radius: 5px;
@@ -350,6 +357,13 @@ form.new-post input[type=text], textarea {
   background-color: #333;
   border: 1px solid white;
   color: white;
+}
+
+form.new-post input[type=search] {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 form.new-post textarea {
@@ -383,7 +397,7 @@ form.new-post input[type=submit]:hover {
 
 form.logout input {
   display: block;
-  margin-left: 79%;
+  margin-left: 70.5%;
   border-radius: 5px;
   margin-top: 5px;
   color: white;
@@ -393,9 +407,64 @@ form.logout input {
   font-family: 'Poppins', arial;
 }
 
+form.logout input.return {
+  margin-left: 85%;
+}
+
+form.logout input.return-search {
+  margin-left: 75.5%;
+}
+
 form.logout input:hover {
   color: #FF3C3C;
   background-color: white;
   border: 1px solid #FF3C3C;
+}
+
+div.control-panel a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 130%;
+  color: white;
+  border-radius: 10px;
+  background-color: #FF00BF;
+  margin-bottom: 5px;
+  border: 2px solid white;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+div.control-panel a:hover {
+  color: #FF00BF;
+  background-color: white;
+  border: 2px solid #FF00BF;
+}
+
+div.control-panel a:last-child {
+  margin-bottom: 20px;
+}
+
+form.new-post select {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: #333;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-family: 'Poppins', arial;
+}
+
+form.new-post div.check {
+  margin-top: 5px;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins', arial;
 }
 /* Control panel */

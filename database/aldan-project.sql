@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 11-02-2018 a las 19:59:21
+-- Tiempo de generación: 13-02-2018 a las 02:25:44
 -- Versión del servidor: 5.7.19
 -- Versión de PHP: 5.6.31
 
@@ -37,14 +37,37 @@ CREATE TABLE IF NOT EXISTS `blog_posts` (
   `img` varchar(15) NOT NULL,
   PRIMARY KEY (`id_post`),
   UNIQUE KEY `id_post` (`id_post`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `blog_posts`
 --
 
 INSERT INTO `blog_posts` (`id_post`, `title`, `description`, `content`, `img`) VALUES
-(1, 'TÃ­tulo del primer artÃ­culo', 'Este es el <b>primer</b> articulo en la pÃ¡gina de <b>Aldan Project</b>, aquÃ­ puedes insertar informaciÃ³n relacionada sobre el tema que se habla en el articulo.<br><br> Incluyendo una <b>imagen</b> que lo acompaÃ±a a su lado izquierdo.<br><br> Y aquÃ­ hay un <a href=\"#\">enlace</a>. Contiene una clase especÃ­fica para el primer articulo mostrado.', '<center>EstÃ¡s leyendo el <b>contenido</b> de la primera publicaciÃ³n en <a href=\"#\">Aldan Project</b>.</center>', 'blog01');
+(1, 'Título del primer artículo', 'Este es el <b>primer</b> articulo en la página de <b>Aldan Project</b>, aquí puedes insertar información relacionada sobre el tema que se habla en el articulo.<br><br> Incluyendo una <b>imagen</b> que lo acompaña a su lado izquierdo.<br><br> Y aquí hay un <a href=\"#\">enlace</a>. Contiene una clase específica para el primer articulo mostrado.', '<center>Estás leyendo el <b>contenido</b> de la primera publicación en <a href=\"#\">Aldan Project</a>.</center>', 'blog01.jpg'),
+(3, 'Prueba de publicación', 'Esta publicación fue <b>realizada</b> usando el panel de administrador.<br>\r\nPuedes encontrar ese panel dando <a href=\'admin\'>clic aquí.</a>', 'Las líneas están configuradas para que tengan alineación justificada, pero también se puede usar etiquetas como <b>CENTER</b> para poder cambiar la alineación de estas.\r\n<center>Línea de ejemplo. Puedes crear publicaciones accediendo a <a href=\'admin\'>este enlace.</a></center>', 'Workshop.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(35) NOT NULL,
+  PRIMARY KEY (`id_user`),
+  UNIQUE KEY `id_user` (`id_user`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id_user`, `username`, `password`) VALUES
+(1, 'Azumi', '63f9f9e9354fe12b2a8c1ed30615a8b7');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

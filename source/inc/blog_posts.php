@@ -38,7 +38,7 @@ function write_posts($res)
     {
       echo '<article class="simple-article" id="' . $post['id_post'] . '">'; //Two or more posts
     }
-    echo '<img src="img/' . $post['img'] . '.jpg">'; //Image
+    echo '<img src="img/' . $post['img'] . '">'; //Image
     echo '<h2>' . $post['title'] . '</h2>'; //Title
     echo '<p>' . $post['description'] . '</p>'; //Description
     echo '<p class="read-more"><a href="post.php?id=' . $post['id_post'] . '">Leer más</a></p>'; //Read more link

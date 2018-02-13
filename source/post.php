@@ -47,7 +47,7 @@
     {
       echo '<article class="post" id="' .$row['id_post'] . '">'; //Post starts
       echo '<h2>' . $row['title'] . '</h2>';
-      echo '<img src="img/' . $row['img'] . '.jpg">';
+      echo '<img src="img/' . $row['img'] . '">';
       echo '<p>' . $row['content'] . '</p>';
       echo '</article>'; //Post ends
     }

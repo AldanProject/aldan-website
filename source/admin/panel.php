@@ -19,18 +19,16 @@
         <form action="lib/logout.php" method="post" class="logout">
           <input type="submit" value="Cerrar sesión">
         </form>
-        <h2>Crear nueva publicación</h2>
-        <form action="lib/new-post.php" method="post" class="new-post">
-          <t class="inline-element">Título</t>
-          <input type="text" name="post-title">
-          <t class="inline-element">Imágen</t>
-          <input type="file" name="post-image" accept="image/jpeg"><br>
-          <t>Descripción</t>
-          <textarea rows="5" cols="87" name="post-desciption"></textarea>
-          <t>Contenido</t>
-          <textarea rows="8" cols="87" name="post-content"></textarea>
-          <input type="submit" value="Publicar">
-        </form>
+        <h2 class="main">Panel de administración</h2>
+        <a href="post.php?new">Nueva publicación</a>
+        <a href="search.php">Buscar publicación</a>
+        <h3>Usuarios</h3>
+        <a href="#">Agregar usuario</a>
+        <a href="#">Buscar usuario</a>
+        <?php
+        if(isset($_GET['error'])) echo '<p>No se pudo crear la publicación</p>';
+        else if(isset($_GET['errorImg'])) echo '<p>No se pudo subir la imagen</p>';
+        ?>
       </div>
     </div>
   </body>
