@@ -14,7 +14,6 @@
     <!-- Login check -->
   </head>
   <body class="login">
-    <?php include("lib/search-post.php"); ?>
     <div class="login">
       <div class="control-panel">
         <form action="panel.php" class="logout">
@@ -22,9 +21,9 @@
         </form>
         <h2 class="main">Buscar publicación</h2>
         <form action="search.php" method="post" class="new-post">
-          <input type="search" name="search-keywords">
+          <input type="search" name="search-keywords" required>
           <t class="center">Buscar por</t>
-          <select name="search-type">
+          <select name="search-type" required>
             <option value="0">Título</option>
             <option value="0">ID</option>
           </select>
@@ -34,9 +33,11 @@
           <input type="submit" value="Buscar">
         </form>
         <form action="search.php" method="get" class="new-post">
+          <input type="hidden" name="search" value="all">
           <input type="submit" value="Mostrar todas">
         </form>
       </div>
+      <?php include("lib/search-post.php"); ?>
     </div>
   </body>
 </html>

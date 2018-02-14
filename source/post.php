@@ -47,6 +47,7 @@
     {
       echo '<article class="post" id="' .$row['id_post'] . '">'; //Post starts
       echo '<h2>' . $row['title'] . '</h2>';
+      echo '<p class="date">Publicado: ' . $row['date'] . '</p>';
       echo '<img src="img/' . $row['img'] . '">';
       echo '<p>' . $row['content'] . '</p>';
       echo '</article>'; //Post ends

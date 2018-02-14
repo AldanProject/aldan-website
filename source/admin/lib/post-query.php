@@ -3,7 +3,7 @@
  {
    echo '<h2>Crear nueva publicación</h2>';
  }
- else if(isset($_GET['mod']))
+ else if(isset($_GET['id']))
  {
    include("../lib/sql-connection.php");
    $id = $_GET['id'];

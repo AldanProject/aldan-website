@@ -28,6 +28,7 @@
         <?php
         if(isset($_GET['error'])) echo '<p>No se pudo crear la publicación</p>';
         else if(isset($_GET['errorImg'])) echo '<p>No se pudo subir la imagen</p>';
+        else if(isset($_GET['posted'])) echo '<p>Se creó la publicación exitosamente</p>';
         ?>
       </div>
     </div>

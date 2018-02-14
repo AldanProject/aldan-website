@@ -6,7 +6,7 @@
 
     <?php
     if(isset($_GET['new'])) echo '<title>Nueva publicación | Aldan Project</title>';
-    else if(isset($_GET['mod'])) echo '<title>Editar publicación | Aldan Project</title>';
+    else if(isset($_GET['id'])) echo '<title>Editar publicación | Aldan Project</title>';
     ?>
 
     <!-- Styles -->
@@ -36,7 +36,7 @@
           <textarea rows="8" cols="87" name="post-content" required><?php if(isset($_GET['id'])) echo $content; ?></textarea>
           <?php
           if(isset($_GET['new'])) echo '<input type="submit" value="Publicar">';
-          else if(isset($_GET['mod'])) echo '<input type="submit" value="Guardar cambios">';
+          else if(isset($_GET['id'])) echo '<input type="submit" value="Guardar cambios">';
           ?>
         </form>
         <?php
