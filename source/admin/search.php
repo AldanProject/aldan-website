@@ -12,24 +12,26 @@
     <!-- Login check -->
     <?php include("lib/login-check.php"); ?>
     <!-- Login check -->
+    <script>
+    function submitForm() {
+      return confirm('Está a punto de eliminar una publicación, ¿está seguro?');
+    }
+    </script>
   </head>
   <body class="login">
-    <div class="login">
+    <div class="login search">
       <div class="control-panel">
         <form action="panel.php" class="logout">
           <input type="submit" value="Regresar" class="return-search">
         </form>
         <h2 class="main">Buscar publicación</h2>
-        <form action="search.php" method="post" class="new-post">
+        <form action="search.php" method="get" class="new-post">
           <input type="search" name="search-keywords" required>
           <t class="center">Buscar por</t>
           <select name="search-type" required>
-            <option value="0">Título</option>
-            <option value="0">ID</option>
+            <option value="title">Título</option>
+            <option value="id_post">ID</option>
           </select>
-          <div class="check">
-            <input type="checkbox" name="search-same">Coincidir mayúsculas y minúsculas
-          </div>
           <input type="submit" value="Buscar">
         </form>
         <form action="search.php" method="get" class="new-post">

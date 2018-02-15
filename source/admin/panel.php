@@ -26,9 +26,39 @@
         <a href="#">Agregar usuario</a>
         <a href="#">Buscar usuario</a>
         <?php
-        if(isset($_GET['error'])) echo '<p>No se pudo crear la publicación</p>';
-        else if(isset($_GET['errorImg'])) echo '<p>No se pudo subir la imagen</p>';
-        else if(isset($_GET['posted'])) echo '<p>Se creó la publicación exitosamente</p>';
+        if(isset($_GET['m']))
+        {
+          switch ($_GET['m'])
+          {
+            case 0:
+              echo '<p>No se pudo crear la publicación</p>';
+              break;
+            case 1:
+              echo '<p>No se pudo subir la imagen</p>';
+              break;
+            case 2:
+              echo '<p>Se creó la publicación exitosamente</p>';
+              break;
+            case 3:
+              echo '<p>La publicación fue eliminada exitosamente</p>';
+              break;
+            case 4:
+              echo '<p>No se pudo eliminar la publicación</p>';
+              break;
+            case 5:
+              echo '<p>No se pudo realizar los cambios</p>';
+              break;
+            case 6:
+              echo '<p>Se han guardado los cambios</p>';
+              break;
+            case 10:
+              echo '<p>Faltan argumentos</p>';
+              break;
+            default:
+              echo '<p>Se ha generado un error desconocido</p>';
+              break;
+          }
+        }
         ?>
       </div>
     </div>

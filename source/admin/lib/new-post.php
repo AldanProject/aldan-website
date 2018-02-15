@@ -18,20 +18,20 @@ $result = mysqli_query($connection, $query);
 if(!$result)
 {
   //echo mysqli_error($connection);
-  header("Location: ../panel.php?error");
+  header("Location: ../panel.php?m=0");
   mysqli_close($connection);
 }
 else
 {
   if(!move_uploaded_file($image['tmp_name'], $path))
   {
-    header("Location: ../panel.php?errorImg");
     mysqli_close($connection);
+    header("Location: ../panel.php?m=1");
   }
   else
   {
-    header("Location: ../panel.php?posted");
     mysqli_close($connection);
+    header("Location: ../panel.php?m=2");
   }
 }
 

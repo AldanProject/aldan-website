@@ -29,14 +29,18 @@
           <t class="inline-element">Título</t>
           <input type="text" name="post-title" required value="<?php if(isset($_GET['id'])) echo $title; ?>">
           <t class="inline-element">Imágen</t>
-          <input type="file" name="post-image" accept="image/jpeg" required><br>
+          <input type="file" name="post-image" accept="image/jpeg" <?php if(!isset($_GET['id'])) echo 'required'; ?>><br>
           <t>Descripción</t>
           <textarea rows="5" cols="87" name="post-description" required><?php if(isset($_GET['id'])) echo $description; ?></textarea>
           <t>Contenido</t>
           <textarea rows="8" cols="87" name="post-content" required><?php if(isset($_GET['id'])) echo $content; ?></textarea>
           <?php
           if(isset($_GET['new'])) echo '<input type="submit" value="Publicar">';
-          else if(isset($_GET['id'])) echo '<input type="submit" value="Guardar cambios">';
+          else if(isset($_GET['id']))
+          {
+            echo '<input type="hidden" name="id_post" value="' . $_GET['id'] . '">';
+            echo '<input type="submit" value="Guardar cambios">';
+          }
           ?>
         </form>
         <?php

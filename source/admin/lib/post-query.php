@@ -11,8 +11,8 @@
    $result = mysqli_query($connection, $query);
    if(!$result)
    {
-     header("Location: panel.php?errorSearch");
      mysqli_close($connection);
+     header("Location: panel.php?errorSearch");
    }
    else
    {
@@ -25,6 +25,7 @@
        $title = $rows['title'];
        $description = $rows['description'];
        $content = $rows['content'];
+       mysqli_close($connection);
      }
    }
  }

@@ -1,12 +1,10 @@
 <?php
  /* Made by Aldan Project | 2018 */
- if(isset($_GET['search']))
+ if(isset($_GET['search']) || isset($_GET['search-keywords']))
  {
-   $type = $_GET['search'];
-
-   if($type != 'all')
+   if(isset($_GET['search-keywords']))
    {
-     include("../lib/sql-connection.php");
+     include("../inc/blog_posts.php");
    }
    else
    {

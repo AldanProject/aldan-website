@@ -25,9 +25,9 @@
       <form action="lib/login.php" method="post" class="log-form">
         <h1>Aldan Project</h1><hr>
         <p>Usuario</p>
-        <input type="text" name="username">
+        <input type="text" name="username" required>
         <p>Contraseña</p>
-        <input type="password" name="password"><br>
+        <input type="password" name="password" required><br>
         <input type="submit" value="Entrar">
         <?php
         if(isset($_GET['e']))

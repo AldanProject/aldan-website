@@ -250,6 +250,10 @@ div.login {
   margin: auto;
 }
 
+div.login.search {
+  width: 75%;
+}
+
 form.log-form {
   background-color: #494949;
   padding: 12px;
@@ -318,6 +322,7 @@ div.control-panel {
   border-radius: 10px;
   border: 2px solid white;
   background-color: #494949;
+  position: relative;
 }
 
 div.control-panel h2, h3 {
@@ -329,6 +334,7 @@ div.control-panel h2, h3 {
 div.control-panel h2.main {
   margin-left: 80px;
   margin-right: 80px;
+  margin-top: 2em;
 }
 
 div.control-panel p {
@@ -336,6 +342,7 @@ div.control-panel p {
   text-align: center;
   font-family: 'Poppins', arial;
 }
+
 
 form.new-post t {
   display: block;
@@ -375,9 +382,10 @@ form.new-post input[type=text], input[type=search], textarea {
 
 form.new-post input[type=search] {
   display: block;
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+  font-size: 110%;
 }
 
 form.new-post textarea {
@@ -391,7 +399,7 @@ form.new-post input[type=submit] {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  width: 75%;
+  width: 85%;
   font-size: 140%;
   color: white;
   border-radius: 10px;
@@ -419,14 +427,9 @@ form.logout input {
   border: 1px solid white;
   font-size: 110%;
   font-family: 'Poppins', arial;
-}
-
-form.logout input.return {
-  margin-left: 85%;
-}
-
-form.logout input.return-search {
-  margin-left: 75.5%;
+  position: absolute;
+  top: 0px;
+  right: 5px;
 }
 
 form.logout input:hover {
@@ -465,7 +468,7 @@ div.control-panel a:last-child {
 
 form.new-post select {
   display: block;
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   color: white;
@@ -473,13 +476,7 @@ form.new-post select {
   border-radius: 5px;
   border: 1px solid white;
   font-family: 'Poppins', arial;
-}
-
-form.new-post div.check {
-  margin-top: 5px;
-  text-align: center;
-  color: white;
-  font-family: 'Poppins', arial;
+  font-size: 110%;
 }
 /* Control panel */
 
@@ -495,7 +492,7 @@ form.delete {
   margin-right: 15px;
 }
 
-form.edit input, form.delete input {
+form.edit input, form.delete button {
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
   font-size: 115%;
@@ -513,12 +510,12 @@ form.edit input:hover {
   border-color: #FF00BF;
 }
 
-form.delete input {
+form.delete button {
   background-color: #FF3C3C;
   border: 1px solid white;
 }
 
-form.delete input:hover {
+form.delete button:hover {
   color: #FF3C3C;
   background-color: white;
   border-color: #FF3C3C;
