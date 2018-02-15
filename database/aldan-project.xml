@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.7.4
+- https://www.phpmyadmin.net
+-
+- Servidor: 127.0.0.1:3306
+- Tiempo de generación: 14-02-2018 a las 03:54:59
+- Versión del servidor: 5.7.19
+- Versión de PHP: 5.6.31
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="aldan-project" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="blog_posts">
+                CREATE TABLE `blog_posts` (
+                  `id_post` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                  `title` varchar(35) NOT NULL,
+                  `description` text NOT NULL,
+                  `content` text NOT NULL,
+                  `img` varchar(50) NOT NULL,
+                  `date` date DEFAULT NULL,
+                  PRIMARY KEY (`id_post`),
+                  UNIQUE KEY `id_post` (`id_post`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id_user` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                  `username` varchar(25) NOT NULL,
+                  `password` varchar(35) NOT NULL,
+                  PRIMARY KEY (`id_user`),
+                  UNIQUE KEY `id_user` (`id_user`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de datos: 'aldan-project'
+    -->
+    <database name="aldan-project">
+        <!-- Tabla blog_posts -->
+        <table name="blog_posts">
+            <column name="id_post">1</column>
+            <column name="title">Título del primer artículo</column>
+            <column name="description">Este es el &lt;b&gt;primer&lt;/b&gt; articulo en la página de &lt;b&gt;Aldan Project&lt;/b&gt;, aquí puedes insertar información relacionada sobre el tema que se habla en el articulo.&lt;br&gt; Incluyendo una &lt;b&gt;imagen&lt;/b&gt; que lo acompaña a su lado izquierdo.&lt;br&gt;&lt;br&gt; Y aquí hay un &lt;a href=&quot;#&quot;&gt;enlace&lt;/a&gt;. Contiene una clase específica para el primer articulo mostrado.</column>
+            <column name="content">&lt;center&gt;Estás leyendo el &lt;b&gt;contenido&lt;/b&gt; de la primera publicación en &lt;a href=&quot;#&quot;&gt;Aldan Project&lt;/a&gt;.&lt;/center&gt;</column>
+            <column name="img">blog01.jpg</column>
+            <column name="date">2018-02-09</column>
+        </table>
+        <table name="blog_posts">
+            <column name="id_post">3</column>
+            <column name="title">Prueba de publicación</column>
+            <column name="description">Esta publicación fue &lt;b&gt;realizada&lt;/b&gt; usando el panel de administrador.&lt;br&gt;
+Puedes encontrar ese panel dando &lt;a href='admin'&gt;clic aquí.&lt;/a&gt;</column>
+            <column name="content">Las líneas están configuradas para que tengan alineación justificada, pero también se puede usar etiquetas como &lt;b&gt;CENTER&lt;/b&gt; para poder cambiar la alineación de estas.
+&lt;center&gt;Línea de ejemplo. Puedes crear publicaciones accediendo a &lt;a href='admin'&gt;este enlace.&lt;/a&gt;&lt;/center&gt;</column>
+            <column name="img">Workshop.jpg</column>
+            <column name="date">2018-02-12</column>
+        </table>
+        <table name="blog_posts">
+            <column name="id_post">5</column>
+            <column name="title">Una pequeña prueba c:</column>
+            <column name="description">En esta publicación se probará el funcionamiento de los archivos si estos realmente existen.</column>
+            <column name="content">No tengo nada de &lt;b&gt;contenido&lt;/b&gt;.</column>
+            <column name="img">blog02.jpg</column>
+            <column name="date">2018-02-13</column>
+        </table>
+        <table name="blog_posts">
+            <column name="id_post">7</column>
+            <column name="title">Creando publicación con fecha</column>
+            <column name="description">Ahora las publicaciones contienen fecha de publicación automática.&lt;br&gt;&lt;br&gt;
+Al parecer todo va bien en el blog (o casi todo).</column>
+            <column name="content">&lt;center&gt;¿A caso quieres contenido?&lt;/center&gt;</column>
+            <column name="img">Glorious PC Gaming.jpg</column>
+            <column name="date">2018-02-13</column>
+        </table>
+        <!-- Tabla users -->
+        <table name="users">
+            <column name="id_user">1</column>
+            <column name="username">Azumi</column>
+            <column name="password">63f9f9e9354fe12b2a8c1ed30615a8b7</column>
+        </table>
+    </database>
+</pma_xml_export>
