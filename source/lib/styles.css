@@ -6,10 +6,11 @@ ul.main-menu {
   margin: auto;
   padding: 0;
   overflow: hidden;
-  background-color: #494949;
+  background-color: #444444;
   width: 75%; /* Navbar size/width */
   text-align: center;
   border-radius: 10px;
+  box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.30);
 }
 
 ul.main-menu li {
@@ -33,13 +34,13 @@ ul.main-menu li a {
 }
 
 ul.main-menu li a:hover {
-  background-color: #616161;
+  background-color: #5A5A5A;
 }
 /* Navbar */
 
 /* Body */
-body.blog {
-  background-color: #333;
+body {
+  background-color: #313131;
 }
 
 body.blog p.message {
@@ -77,24 +78,41 @@ hr {
 /* Body */
 
 /* Article */
+div.post.main {
+ width: 75%;
+ margin-left: auto;
+ margin-right: auto;
+ border-radius: 15px;
+ box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.30);
+}
+
+div.post article {
+  border-bottom: 1px solid #666666;
+}
+
+div.post article:first-child {
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+div.post article:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: none;
+}
+
 article.simple-article {
-  width: 75%; /* Acticle size/width */
   margin-left: auto;
   margin-right: auto;
   overflow: auto;
   display: block;
-  background-color: #494949;
+  background-color: #444444;
   position: relative;
-  border-radius: 15px;
-  margin-top: 5px;
 }
 
 article.search {
   width: 100%;
-}
-
-article.first-article {
-  margin-top: 10px;
 }
 
 article.simple-article h2 {
@@ -173,8 +191,9 @@ footer {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin-top: 10px;
-  background-color: #494949;
+  background-color: #444444;
   border-radius: 10px;
+  box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.30);
 }
 /* Footer */
 
@@ -184,11 +203,11 @@ article.post {
   margin-left: auto;
   margin-right: auto;
   overflow: auto;
-  display: block;
   background-color: #494949;
   border-radius: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
+  box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.30);
 }
 
 article.post h2 {
@@ -237,8 +256,9 @@ article.post p a:hover, center a:hover {
 
 /* Login */
 html.login, body.login {
-    height: 98%;
-    width: 99%;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     background-color: #333;
 }
 
@@ -258,10 +278,11 @@ form.log-form {
   background-color: #494949;
   padding: 12px;
   border-radius: 10px;
-  border: 2px dotted white;
+  border: 2px solid white;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 125%;
+  box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.50);
 }
 
 form.log-form p {
@@ -323,6 +344,7 @@ div.control-panel {
   border: 2px solid white;
   background-color: #494949;
   position: relative;
+  box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.50);
 }
 
 div.control-panel h2, h3 {
@@ -359,7 +381,14 @@ form.new-post t.inline-element {
   margin-bottom: 10px;
 }
 
-form.new-post t.center {
+form.new-post t.search {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-right: 10px;
+  font-size: 110%;
+}
+
+div.center-element {
   text-align: center;
 }
 
@@ -386,6 +415,7 @@ form.new-post input[type=search] {
   margin-left: auto;
   margin-right: auto;
   font-size: 110%;
+  margin-bottom: 12px;
 }
 
 form.new-post textarea {
@@ -395,10 +425,7 @@ form.new-post textarea {
 
 form.new-post input[type=submit] {
   display: block;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+  margin: 10px auto 10px auto;
   width: 85%;
   font-size: 140%;
   color: white;
@@ -467,10 +494,7 @@ div.control-panel a:last-child {
 }
 
 form.new-post select {
-  display: block;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 50%;
   color: white;
   background-color: #333;
   border-radius: 5px;

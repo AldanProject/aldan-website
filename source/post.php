@@ -34,6 +34,8 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="lib/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Poppins" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Styles -->
   </head>
   <body class="blog">
     <h1>Aldan Project</h1>
