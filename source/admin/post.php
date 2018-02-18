@@ -22,7 +22,7 @@
   <body class="login">
     <div class="login">
       <div class="control-panel">
-        <form action="panel.php" class="logout">
+        <form action="panel.php" class="logout" method="post">
           <input type="submit" value="Regresar" class="return">
         </form>
         <?php include("lib/post-query.php"); ?>

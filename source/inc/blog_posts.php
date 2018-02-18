@@ -2,14 +2,18 @@
 /* Made by Aldan Project | 2018 */
 
 if(!isset($_GET['search']) && !isset($_GET['search-keywords']))
+{
   include("lib/sql-connection.php");
-else
-  include("../lib/sql-connection.php");
-
-if(!isset($_GET['search-keywords']))
   $query = "SELECT * FROM blog_posts ORDER BY id_post DESC";
+}
+else if(isset($_GET['search']) && $_GET['search'] == "all")
+{
+  include("../lib/sql-connection.php");
+  $query = "SELECT * FROM blog_posts ORDER BY id_post DESC";
+}
 else
 {
+  include("../lib/sql-connection.php");
   $text = $_GET['search-keywords'];
   $caps = " LIKE ";
   if(isset($_GET['search-type']))
@@ -22,8 +26,7 @@ else
   else
     $text = '%' . $text . '%';
 
-  $query = 'SELECT * FROM blog_posts WHERE ' . $type . $caps . '"' . $text . '" ORDER BY id_post DESC';
-  //echo $query;
+  $query = "SELECT * FROM blog_posts WHERE {$type} {$caps} '{$text}' ORDER BY id_post DESC";
 }
 
 $result = mysqli_query($connection, $query);
@@ -31,6 +34,7 @@ $result = mysqli_query($connection, $query);
 if(!$result)
 {
   echo '<p class="message">Error al realizar la consulta</p>';
+  //echo '<p class="message">" . mysqli_error($connection) . "</p>';
 }
 else
 {

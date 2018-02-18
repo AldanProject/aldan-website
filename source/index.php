@@ -11,7 +11,6 @@
     <!--Styles -->
   </head>
   <body class="blog">
-    <h1>Aldan Project</h1>
     <!-- Navigation bar -->
     <?php include("inc/navbar.php"); ?>
     <!-- Navigation bar -->

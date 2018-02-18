@@ -17,6 +17,7 @@
   <body class="login">
     <div class="login">
       <div class="control-panel">
+        <h4><?php echo "Bienvenido/a " . $_SESSION['username']; ?></h4>
         <form action="lib/logout.php" method="post" class="logout">
           <input type="submit" value="Cerrar sesión">
         </form>

@@ -3,8 +3,10 @@
  include("../../lib/sql-connection.php");
 
  $id = $_GET['id'];
- $query = "DELETE FROM blog_posts WHERE id_post = " . $id;
- $result = mysqli_query($connection, $query);
+ $query = $connection->prepare("DELETE FROM blog_posts WHERE id_post = ?");
+ $query->bind_param("i", $id);
+ $query->execute();
+ $result = $query->get_result();
 
  if(!$result)
  {

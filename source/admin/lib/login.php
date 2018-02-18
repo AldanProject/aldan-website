@@ -6,8 +6,10 @@ include("../../lib/sql-connection.php");
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$query = 'SELECT username FROM users WHERE username = "' . $username . '" AND password = md5("' . $password . '");';
-$result = mysqli_query($connection, $query);
+$query = $connection->prepare("SELECT * FROM users WHERE username = ? AND password = md5(?)");
+$query->bind_param("ss", $username, $password);
+$query->execute();
+$result = $query->get_result();
 
 if(!$result)
 {
@@ -23,6 +25,7 @@ else
   }
   else
   {
+    die(mysqli_error($connection));
     header("Location: ../index.php?e=2");
   }
 }

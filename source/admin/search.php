@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Made by Aldan Project | 2018 -->
-<html class="login">
+<html class="login search">
   <head>
     <meta charset="utf-8">
     <title>Buscar publicación | Aldan Project</title>
@@ -19,10 +19,10 @@
     }
     </script>
   </head>
-  <body class="login">
+  <body class="login search">
     <div class="login search">
       <div class="control-panel">
-        <form action="panel.php" class="logout">
+        <form action="panel.php" class="logout" method="post">
           <input type="submit" value="Regresar" class="return-search">
         </form>
         <h2 class="main">Buscar publicación</h2>
