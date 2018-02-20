@@ -7,7 +7,7 @@ ul.main-menu {
   padding: 0;
   overflow: hidden;
   background-color: #444444;
-  width: 75%; /* Navbar size/width */
+  width: 80vw; /* Navbar size/width */
   text-align: center;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.30);
@@ -37,11 +37,24 @@ ul.main-menu li a {
 ul.main-menu li a:hover {
   background-color: #5A5A5A;
 }
+
+img.logo {
+  display: block;
+  width: 520px;
+  margin: 0px auto 10px auto;
+  transition: 0.25s;
+}
+
+img.logo:hover {
+  filter: drop-shadow(0px 0px 5px blue);
+}
 /* Navbar */
 
 /* Body */
 body {
   background-color: #313131;
+  overflow: auto;
+  margin-top: 0px;
 }
 
 body.blog p.message {
@@ -50,7 +63,7 @@ body.blog p.message {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 75%; /* Message size */
+  width: 80vw; /* Message size */
   font-size: 120%;
 }
 
@@ -80,7 +93,7 @@ hr {
 
 /* Article */
 div.post.main {
- width: 75%;
+ width: 80vw; /* Article size/width */
  margin-left: auto;
  margin-right: auto;
  border-radius: 15px;
@@ -197,7 +210,7 @@ article.simple-article p.date, article.post p.date {
 
 /* Footer */
 footer, div.about {
-  width: 75%; /* Footer size */
+  width: 80vw; /* Footer size */
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -216,7 +229,7 @@ footer p {
 
 /* Post */
 article.post {
-  width: 75%; /* Acticle size/width */
+  width: 80vw; /* Acticle size/width */
   margin-left: auto;
   margin-right: auto;
   overflow: auto;
@@ -378,7 +391,10 @@ div.control-panel h2, div.control-panel h3 {
 
 div.control-panel h4 {
   text-align: left;
-  margin-left: 20px;
+  margin: 15px 0px 0px 20px;
+  color: white;
+  font-family: 'Poppins', arial;
+  font-size: 1.3em;
 }
 
 div.control-panel h2.main {
@@ -686,3 +702,15 @@ div.members p.description {
   margin: auto;
 }
 /* About */
+
+/* Media */
+@media (max-width: 1270px) {
+  ul.main-menu,
+  body.blog p.message,
+  footer,
+  div.post.main,
+  article.post,
+  div.about  {
+    width: 95vw;
+  }
+}

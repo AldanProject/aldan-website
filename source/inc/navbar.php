@@ -1,4 +1,4 @@
-<h1>Aldan Project</h1>
+<a href="index.php"><img src="img/logo/aldan-project.png" class="logo" alt="Aldan Project - Logo"></a>
 <ul class="main-menu">
   <li><a href="index.php">Inicio</a></li>
   <li><a href="#">Foros</a></li>

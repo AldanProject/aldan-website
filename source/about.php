@@ -28,7 +28,7 @@
         <ul class="links">
           <li>
             <img src="img/icon/github-icon.png">
-            <a href="#">GitHub profile</a>
+            <a href="https://github.com/JuiceSanti12">Perfil de GitHub</a>
           </li>
           <li>
             <img src="img/icon/facebook-icon.png">
@@ -51,11 +51,9 @@
         <img src="img/profile/alexazumi.jpg" class="profile">
         <h4>Cesar Alejandro Hernández Suárez</h4>
         <ul class="links">
-          <a href="">
-          </a>
           <li>
             <img src="img/icon/github-icon.png">
-            <a href="#">GitHub profile</a>
+            <a href="https://github.com/AlexAzumi">Perfil de GitHub</a>
           </li>
           <li>
             <img src="img/icon/facebook-icon.png">
