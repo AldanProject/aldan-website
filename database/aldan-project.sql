@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 14-02-2018 a las 03:54:57
+-- Tiempo de generación: 16-02-2018 a las 00:42:14
 -- Versión del servidor: 5.7.19
 -- Versión de PHP: 5.6.31
 
@@ -38,17 +38,16 @@ CREATE TABLE IF NOT EXISTS `blog_posts` (
   `date` date DEFAULT NULL,
   PRIMARY KEY (`id_post`),
   UNIQUE KEY `id_post` (`id_post`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `blog_posts`
 --
 
 INSERT INTO `blog_posts` (`id_post`, `title`, `description`, `content`, `img`, `date`) VALUES
-(1, 'Título del primer artículo', 'Este es el <b>primer</b> articulo en la página de <b>Aldan Project</b>, aquí puedes insertar información relacionada sobre el tema que se habla en el articulo.<br> Incluyendo una <b>imagen</b> que lo acompaña a su lado izquierdo.<br><br> Y aquí hay un <a href=\"#\">enlace</a>. Contiene una clase específica para el primer articulo mostrado.', '<center>Estás leyendo el <b>contenido</b> de la primera publicación en <a href=\"#\">Aldan Project</a>.</center>', 'blog01.jpg', '2018-02-09'),
-(3, 'Prueba de publicación', 'Esta publicación fue <b>realizada</b> usando el panel de administrador.<br>\r\nPuedes encontrar ese panel dando <a href=\'admin\'>clic aquí.</a>', 'Las líneas están configuradas para que tengan alineación justificada, pero también se puede usar etiquetas como <b>CENTER</b> para poder cambiar la alineación de estas.\r\n<center>Línea de ejemplo. Puedes crear publicaciones accediendo a <a href=\'admin\'>este enlace.</a></center>', 'Workshop.jpg', '2018-02-12'),
-(5, 'Una pequeña prueba c:', 'En esta publicación se probará el funcionamiento de los archivos si estos realmente existen.', 'No tengo nada de <b>contenido</b>.', 'blog02.jpg', '2018-02-13'),
-(7, 'Creando publicación con fecha', 'Ahora las publicaciones contienen fecha de publicación automática.<br><br>\r\nAl parecer todo va bien en el blog (o casi todo).', '<center>¿A caso quieres contenido?</center>', 'Glorious PC Gaming.jpg', '2018-02-13');
+(1, 'Título del primer artículo', 'Este es el <b>primer</b> articulo en la página de <b>Aldan Project</b>, aquí puedes insertar información relacionada sobre el tema que se habla en el articulo.<br> Incluyendo una <b>imagen</b> que lo acompaña a su lado izquierdo.<br><br> Y aquí hay un <a href=\'#\'>enlace</a>.', '<center>Estás leyendo el <b>contenido</b> de la primera publicación en <a href=\'#\'>Aldan Project</a>', 'blog01.jpg', '2018-02-09'),
+(8, 'Publicación creada con el panel', 'Descripción escrita en un <b>textarea</b> en el panel de administrador, el cual puede eliminar, modificar y buscar publicaciones.', '<center>Contenido centrado</center>', 'blog02.jpg', '2018-02-15'),
+(9, 'Nueva publicación', 'Probando el número de publicaciones impar.', 'No hay :c', 'blog01.jpg', '2018-02-15');
 
 -- --------------------------------------------------------
 

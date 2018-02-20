@@ -12,6 +12,7 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="../lib/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Poppins" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../favicon.png">
     <!-- Styles -->
 
     <!-- Login check -->
@@ -21,7 +22,7 @@
   <body class="login">
     <div class="login">
       <div class="control-panel">
-        <form action="panel.php" class="logout">
+        <form action="panel.php" class="logout" method="post">
           <input type="submit" value="Regresar" class="return">
         </form>
         <?php include("lib/post-query.php"); ?>
@@ -29,7 +30,7 @@
           <t class="inline-element">Título</t>
           <input type="text" name="post-title" required value="<?php if(isset($_GET['id'])) echo $title; ?>">
           <t class="inline-element">Imágen</t>
-          <input type="file" name="post-image" accept="image/jpeg" <?php if(!isset($_GET['id'])) echo 'required'; ?>><br>
+          <input type="file" name="post-image" accept="image/*" <?php if(!isset($_GET['id'])) echo 'required'; ?>><br>
           <t>Descripción</t>
           <textarea rows="5" cols="87" name="post-description" required><?php if(isset($_GET['id'])) echo $description; ?></textarea>
           <t>Contenido</t>

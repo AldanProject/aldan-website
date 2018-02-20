@@ -7,6 +7,7 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="../lib/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Poppins" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../favicon.png">
     <!-- Styles -->
 
     <!-- Login check -->
@@ -16,6 +17,7 @@
   <body class="login">
     <div class="login">
       <div class="control-panel">
+        <h4><?php echo "Bienvenido/a " . $_SESSION['username']; ?></h4>
         <form action="lib/logout.php" method="post" class="logout">
           <input type="submit" value="Cerrar sesión">
         </form>

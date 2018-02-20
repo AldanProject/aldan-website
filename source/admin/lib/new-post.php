@@ -12,8 +12,10 @@ $image = $_FILES['post-image'];
 $name_img = basename($image['name']);
 $path = $path . $name_img;
 
-$query = 'INSERT INTO blog_posts(id_post, title, description, content, img, date) VALUES(null, "'.$title.'","'.$description.'","'.$content.'","'.$name_img.'", now());';
-$result = mysqli_query($connection, $query);
+$query = $connection->prepare("INSERT INTO blog_posts(id_post, title, description, content, img, date) VALUES(null, ?, ?, ?, ?, now())");
+$query->bind_param("ssss", $title, $description, $content, $name_img);
+$query->execute();
+$result = $query->get_result();
 
 if(!$result)
 {

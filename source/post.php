@@ -7,8 +7,12 @@
     include("lib/sql-connection.php");
 
     $id = $_GET['id'];
-    $query = "SELECT * FROM blog_posts WHERE id_post = " . $id;
-    $result = mysqli_query($connection, $query);
+
+    //Placeholder | Thanks @saber-nyan!
+    $query = $connection->prepare("SELECT * FROM blog_posts WHERE id_post = ?");
+    $query->bind_param("i", $id);
+    $query->execute();
+    $result = $query->get_result();
 
     if(!$result)
     {
@@ -34,9 +38,10 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="lib/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Poppins" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Styles -->
   </head>
   <body class="blog">
-    <h1>Aldan Project</h1>
     <!-- Navigation bar -->
     <?php include("inc/navbar.php"); ?>
     <!-- Navigation bar -->
