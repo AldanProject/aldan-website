@@ -11,11 +11,11 @@
  if(!$result)
  {
    mysqli_close($connection);
-   header("Location: ../panel?m=4");
+   header("Location: ../panel.php?m=4");
  }
  else
  {
    mysqli_close($connection);
-   header("Location: ../panel?m=3");
+   header("Location: ../panel.php?m=3");
  }
 ?>

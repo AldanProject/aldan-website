@@ -24,7 +24,7 @@
     <!-- Form -->
     <div class="login">
       <form action="lib/login.php" method="post" class="log-form">
-        <h1>Aldan Project</h1><hr>
+        <img src="../img/logo/aldan-project.png" class="logo"><hr>
         <p>Usuario</p>
         <input type="text" name="username" required>
         <p>Contraseña</p>

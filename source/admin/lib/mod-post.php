@@ -2,6 +2,7 @@
 /* Made by Aldan Project | 2018 */
 
 include("../../lib/sql-connection.php");
+
 $path = "../../img/";
 $id = $_POST['id_post'];
 $title = $_POST['post-title'];

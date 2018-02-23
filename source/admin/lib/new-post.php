@@ -19,9 +19,8 @@ $result = $query->get_result();
 
 if(!$result)
 {
-  //echo mysqli_error($connection);
-  header("Location: ../panel.php?m=0");
   mysqli_close($connection);
+  header("Location: ../panel.php?m=0");
 }
 else
 {

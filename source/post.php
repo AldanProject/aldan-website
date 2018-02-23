@@ -10,30 +10,36 @@
 
     //Placeholder | Thanks @saber-nyan!
     $query = $connection->prepare("SELECT * FROM blog_posts WHERE id_post = ?");
-    $query->bind_param("i", $id);
-    $query->execute();
-    $result = $query->get_result();
-
-    if(!$result)
+    if($query == false)
     {
-      echo '<p class="message">Error al realizar la consulta</p>';
+      die('pepare() failed: ' . htmlspecialchars($connection->error));
     }
     else
     {
-      $num = mysqli_num_rows($result);
-      if($num > 0)
+      $query->bind_param("i", $id);
+      $query->execute();
+      $result = $query->get_result();
+
+      if(!$result)
       {
-        $post = True;
-        $row = mysqli_fetch_array($result);
-        echo '<title>' . $row['title'] . ' | Aldan Project</title>';
+        echo '<p class="message">Error al realizar la consulta</p>';
       }
       else
       {
-        $post = False;
-        echo '<title>Publicación no encontrada | Aldan Project</title>';
+        $num = mysqli_num_rows($result);
+        if($num > 0)
+        {
+          $post = True;
+          $row = mysqli_fetch_array($result);
+          echo '<title>' . $row['title'] . ' | Aldan Project</title>';
+        }
+        else
+        {
+          $post = False;
+          echo '<title>Publicación no encontrada | Aldan Project</title>';
+        }
       }
     }
-
     ?>
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="lib/styles.css">
