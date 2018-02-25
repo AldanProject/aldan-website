@@ -2,6 +2,7 @@
 <!-- Made by Aldan Project | 2018 -->
 <html>
   <head>
+    <?php include("lib/config.php"); ?>
     <meta charset="utf-8">
     <title>Página no encontrada | Aldan Project</title>
     <!-- Styles -->
@@ -56,7 +57,7 @@
     <div>
       <h2>Error 404</h2>
       <p>Por alguna razón, la página que solicitaste no existe.</p>
-      <p>Puedes regresar al inicio haciendo <a href="index.php">CLICK AQUÍ</a></p>
+      <p>Puedes regresar al inicio haciendo <a href="<?php echo SERVER; ?>">CLICK AQUÍ</a></p>
     </div>
   </body>
 </html>

@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <?php
+    include("lib/config.php");
     include("lib/sql-connection.php");
 
     $id = $_GET['id'];
@@ -42,9 +43,9 @@
     }
     ?>
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="lib/styles.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo SERVER; ?>lib/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Poppins" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo SERVER; ?>favicon.png">
     <!-- Styles -->
   </head>
   <body class="blog">
@@ -59,14 +60,14 @@
       echo '<article class="post" id="' .$row['id_post'] . '">'; //Post starts
       echo '<h2>' . $row['title'] . '</h2>';
       echo '<p class="date">Publicado: ' . $row['date'] . '</p>';
-      echo '<img src="img/' . $row['img'] . '">';
+      echo '<img src="'. SERVER .'img/' . $row['img'] . '">';
       echo '<p>' . $row['content'] . '</p>';
       echo '</article>'; //Post ends
     }
     else
     {
         echo '<p class="message">La publicación no fue encontrada</p>';
-        echo '<p class="message"><a href="index.php">Regresar al inicio</a></p>';
+        echo '<p class="message"><a href="'. SERVER .'">Regresar al inicio</a></p>';
     }
     mysqli_close($connection);
     ?>

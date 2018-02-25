@@ -82,7 +82,8 @@ function write_posts($res)
     echo '<p class="date">' . $post['date'] . '</p>'; //Date
     echo '<p>' . $post['description'] . '</p>'; //Description
     if(!isset($_GET['search']) && !isset($_GET['search-keywords']))
-      echo '<p class="read-more"><a href="post.php?id=' . $post['id_post'] . '">Leer más</a></p>'; //Read more link
+      echo "<p class='read-more'><a href='" . SERVER . "post/{$post['id_post']}'>Leer más</a></p>";
+      //echo '<p class="read-more"><a href="post.php?id=' . $post['id_post'] . '">Leer más</a></p>'; //Read more link
     else
     {
       echo '<form action="post.php" method="get" class="edit">';
