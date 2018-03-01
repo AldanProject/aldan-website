@@ -6,7 +6,7 @@ include("../../lib/sql-connection.php");
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$query = $connection->prepare("SELECT * FROM users WHERE username = ? AND password = MD5(?)");
+$query = $connection->prepare("SELECT username, level FROM users WHERE username = ? AND password = MD5(?)");
 if($query == false)
 {
   die('pepare() failed: ' . htmlspecialchars($connection->error));
@@ -38,11 +38,17 @@ else
 
 function login($user)
 {
-  //Session starts here
-  session_start();
-  $_SESSION['username'] = $user['username'];
+  if($user['level'] == 1)
+  {
+    //Session starts here
+    session_start();
+    $_SESSION['username'] = $user['username'];
+    $_SESSION['level'] = $user['level'];
 
-  header("Location: ../panel.php");
+    header("Location: ../panel.php");
+  }
+  else
+    header("Location: ../index.php?e=2");
 }
 
 ?>

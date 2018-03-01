@@ -15,7 +15,8 @@
     session_start();
     if(isset($_SESSION['username']))
     {
-      header("Location: panel.php");
+      if($_SESSION['level'] == 1)
+        header("Location: panel.php");
     }
     ?>
     <!-- User logged -->
