@@ -53,8 +53,9 @@ img.logo:hover {
 
 /* Body */
 body {
+  width: 100vw;
   background-color: #313131;
-  overflow: auto;
+  overflow-x: hidden;
   margin-top: 0px;
 }
 
