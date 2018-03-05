@@ -18,11 +18,11 @@
 
     <!-- Articles section -->
     <div class="about">
-      <h2>Sobre nosotros</h2>
+      <h1>Sobre nosotros</h1>
       <p>Aldan Project es un grupo de trabajo del Centro de Enseñanza Técnica Industrial, plantel Tonalá
         con el objetivo de brindar un ecosistema para nuestro videojuego llamado <b>Medal of Darkness</b>, y así
         dar la mejor experiencia a nuestros usuarios.</p>
-      <h3>Miembros de Aldan Project</h3>
+      <h2>Miembros de Aldan Project</h2>
       <div class="members">
         <img src="<?php echo SERVER; ?>img/profile/juice.jpg" class="profile">
         <h4>Juan Daniel Santiago Valle</h4>
