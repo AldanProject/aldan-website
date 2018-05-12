@@ -6,7 +6,7 @@ include("../../lib/sql-connection.php");
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$query = $connection->prepare("SELECT username, level FROM users WHERE username = ? AND password = MD5(?)");
+$query = $connection->prepare("SELECT username, level FROM users WHERE username = ? AND password = SHA2(?, 256)");
 if($query == false)
 {
   die('pepare() failed: ' . htmlspecialchars($connection->error));
