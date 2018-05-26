@@ -77,7 +77,7 @@ function write_posts($res)
     else
       echo '<img src="../img/';
 
-    echo $post['img'] . '">';
+    echo 'blog' . $post['id_post'] . '.jpg">';
     echo '<h2>' . $post['title'] . '</h2>'; //Title
     echo '<p class="date">' . $post['date'] . '</p>'; //Date
     echo '<p>' . $post['description'] . '</p>'; //Description

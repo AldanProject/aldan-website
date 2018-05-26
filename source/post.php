@@ -60,7 +60,7 @@
       echo '<article class="post" id="' .$row['id_post'] . '">'; //Post starts
       echo '<h2>' . $row['title'] . '</h2>';
       echo '<p class="date">Publicado: ' . $row['date'] . '</p>';
-      echo '<img src="'. SERVER .'img/' . $row['img'] . '">';
+      echo '<img src="'. SERVER .'img/blog' . $row['id_post'] . '.jpg">';
       echo '<p>' . $row['content'] . '</p>';
       echo '</article>'; //Post ends
     }

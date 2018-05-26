@@ -12,14 +12,10 @@ $image = $_FILES['post-image'];
 
 if(!empty($image))
 {
-  $name_img = basename($image['name']);
-  $path = $path . $name_img;
+  $uploadFile = $path . "blog{$id}.jpg";
 }
 
-$query = 'UPDATE blog_posts SET title = "' . $title . '", description = "' . $description . '", content = "' . $content . '"';
-if(!empty($name_img))
-  $query .= ', img = "' . $name_img . '"';
-$query .= ' WHERE id_post = ' . $id;
+$query = "UPDATE blog_posts SET title = '{$title}', description = '{$description}', content = '{$content}' WHERE id_post = {$id}";
 $result = mysqli_query($connection, $query);
 
 if(!$result)
@@ -29,9 +25,9 @@ if(!$result)
 }
 else
 {
-  if(!empty($name_img))
+  if(!empty($uploadFile))
   {
-    if(!move_uploaded_file($image['tmp_name'], $path))
+    if(!move_uploaded_file($image['tmp_name'], $uploadFile))
     {
       mysqli_close($connection);
       header("Location: ../panel.php?m=1");
