@@ -88,7 +88,7 @@ body.blog p.message a:hover {
 
 h1 {
   margin-top: 10px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   text-align: center;
   color: #D906D3;
   font-family: 'Poppins', sans-serif;
@@ -615,17 +615,17 @@ div.about h1, div.about h2 {
 }
 
 div.about h2 {
-  font-size: 250%;
+  font-size: 1.5em;
 }
 
 div.about h3 {
-  font-size: 200%;
+  font-size: 1.2em;
 }
 
 div.about h4 {
   color: white;
   font-family: 'Poppins', sans-serif;
-  font-size: 150%;
+  font-size: 1.3em;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -637,9 +637,10 @@ div.about h4 a:hover {
 }
 
 div.about p {
-  margin: auto 50px auto 50px;
   color: white;
   font-family: 'Montserrat', arial;
+  font-size: 1em;
+  margin: auto 50px auto 50px;
   text-align: justify;
 }
 
