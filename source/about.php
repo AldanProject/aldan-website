@@ -44,8 +44,12 @@
             <a href="https://twitter.com/Juice_Santi12">Twitter</a>
           </li>
         </ul>
-        <p class="description">
-          Descripción acerca de @Juice_Santi12.
+        <p class="description adjust">
+          Hola c:<br><br>
+          Mi nombre es Juan Daniel Santiago Valle, tengo 19 años y soy integrante de este proyecto.<br>
+          Me gusta la música rock, el anime y los videojuego.<br>
+          Soy jugador top del videojuego smash bros 4.<br>
+          Espero que este proyecto sea de su agrado
         </p>
       </div>
       <div class="members">
@@ -69,8 +73,10 @@
             <a href="https://twitter.com/AlexAzumi">Twitter</a>
           </li>
         </ul>
-        <p class="description">
-          Descripción acerca de @AlexAzumi.
+        <p class="description adjust">
+          Buenas, mi nombre es Cesar Alejandro Hernández Suárez, pero también me puedes encontrar en muchos lugares como Alejandro Suárez, soy de Tonalá, una pequeña ciudad en Jalisco, México, tengo 20 años y uno de mis más grandes sueños es conocer Japón, su cultura, estilo de vida y sobre todo los árboles de sakura que habitan en él.<br>
+          Desde muy pequeño he tenido una gran afición por los videojuegos, y la tecnología, pero no fue hasta hace un par de años que desarrollé un gusto muy grande por la programación.
+          Mis pasatiemos más grandes son la música (me encantaría aprender a tocar el piano), los videojuegos, y obviamente la programación.
         </p>
       </div>
     </div>

@@ -712,6 +712,11 @@ ul.links li img {
 div.members p.description {
   margin: auto;
 }
+
+.adjust {
+  text-align: justify;
+  margin-right: 150px !important;
+}
 /* About */
 
 /* Game */
