@@ -719,9 +719,19 @@ div.members p.description {
   float: right;
   width: 480px;
   height: 270px;
-  margin: 0 15px 15px 0;
+  margin: 0px 10px 10px 15px;
   border-radius: 5px;
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+.game p.description {
+  margin: 10px 15px;
+}
+
+.game p.download {
+  margin: 20px auto 0 auto;
+  text-align: center;
+  font-size: 1.8em;
 }
 /* Game */
 

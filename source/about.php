@@ -21,7 +21,7 @@
       <h1>Sobre nosotros</h1>
       <p>Aldan Project es un grupo de trabajo del Centro de Enseñanza Técnica Industrial, plantel Tonalá
         con el objetivo de brindar un ecosistema para nuestro videojuego llamado <b>Medal of Darkness</b>, y así
-        dar la mejor experiencia a nuestros usuarios.</p>
+        ofrecer la mejor experiencia a nuestros usuarios.</p>
       <h2>Miembros de Aldan Project</h2>
       <div class="members">
         <img src="<?php echo SERVER; ?>img/profile/juice.jpg" class="profile">
@@ -33,15 +33,15 @@
           </li>
           <li>
             <img src="<?php echo SERVER; ?>img/icon/facebook-icon.png">
-            <a href="#">Facebook</a>
+            <a href="https://www.facebook.com/JuiceSanti">Facebook</a>
           </li>
           <li>
             <img src="<?php echo SERVER; ?>img/icon/instagram-icon.png">
-            <a href="#">Instagram</a>
+            <a href="https://www.instagram.com/danysantiagovalle/">Instagram</a>
           </li>
           <li>
             <img src="<?php echo SERVER; ?>img/icon/twitter-icon.png">
-            <a href="#">Twitter</a>
+            <a href="https://twitter.com/Juice_Santi12">Twitter</a>
           </li>
         </ul>
         <p class="description">
@@ -58,15 +58,15 @@
           </li>
           <li>
             <img src="<?php echo SERVER; ?>img/icon/facebook-icon.png">
-            <a href="#">Facebook</a>
+            <a href="https://www.facebook.com/AlejandroSuarez7u7">Facebook</a>
           </li>
           <li class="instagram">
             <img src="<?php echo SERVER; ?>img/icon/instagram-icon.png">
-            <a href="#">Instagram</a>
+            <a href="https://www.instagram.com/alexazumi115/">Instagram</a>
           </li>
           <li>
             <img src="<?php echo SERVER; ?>img/icon/twitter-icon.png">
-            <a href="#">Twitter</a>
+            <a href="https://twitter.com/AlexAzumi">Twitter</a>
           </li>
         </ul>
         <p class="description">
