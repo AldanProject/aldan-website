@@ -74,7 +74,7 @@
           </li>
         </ul>
         <p class="description adjust">
-          Buenas, mi nombre es Cesar Alejandro Hernández Suárez, pero también me puedes encontrar en muchos lugares como Alejandro Suárez, soy de Tonalá, una pequeña ciudad en Jalisco, México, tengo 20 años y uno de mis más grandes sueños es conocer Japón, su cultura, estilo de vida y sobre todo los árboles de sakura que habitan en él.<br>
+          Buenas, mi nombre es Cesar Alejandro Hernández Suárez, pero también me puedes encontrar en muchos lugares como Alejandro Suárez, soy de Tonalá, una pequeña ciudad en Jalisco, México, tengo 20 años y uno de mis más grandes sueños es conocer Japón, su cultura, estilo de vida y sobre todo los árboles de sakura que habitan en él.<br><br>
           Desde muy pequeño he tenido una gran afición por los videojuegos, y la tecnología, pero no fue hasta hace un par de años que desarrollé un gusto muy grande por la programación.
           Mis pasatiemos más grandes son la música (me encantaría aprender a tocar el piano), los videojuegos, y obviamente la programación.
         </p>
