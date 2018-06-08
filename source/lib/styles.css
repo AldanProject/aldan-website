@@ -738,6 +738,12 @@ div.members p.description {
   text-align: center;
   font-size: 1.8em;
 }
+
+.logo-game {
+  width: 500px;
+  height: 90px;
+  margin: 0 auto;
+}
 /* Game */
 
 /* Media */
