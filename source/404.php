@@ -2,6 +2,7 @@
 <!-- Made by Aldan Project | 2018 -->
 <html>
   <head>
+    <?php include("lib/config.php"); ?>
     <meta charset="utf-8">
     <title>Página no encontrada | Aldan Project</title>
     <!-- Styles -->
@@ -26,15 +27,19 @@
         padding-bottom: 4px;
       }
       div {
-        margin: auto;
+        display: none;
+      }
+      div.main-frame {
         background-color: #494949;
-        padding: 12px;
         border-radius: 10px;
         border: 2px solid white;
+        box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.50);
         color: white;
+        display: block;
         font-family: 'Montserrat', sans-serif;
         font-size: 125%;
-        box-shadow: 0px 0px 5px 3px rgba(255,255,255,0.50);
+        margin: auto;
+        padding: 12px;
       }
       a {
         color: #FF0080;
@@ -53,10 +58,10 @@
     <!--Styles -->
   </head>
   <body>
-    <div>
+    <div class="main-frame">
       <h2>Error 404</h2>
       <p>Por alguna razón, la página que solicitaste no existe.</p>
-      <p>Puedes regresar al inicio haciendo <a href="index.php">CLICK AQUÍ</a></p>
+      <p>Puedes regresar al inicio haciendo <a href="<?php echo SERVER; ?>">CLICK AQUÍ</a></p>
     </div>
   </body>
 </html>

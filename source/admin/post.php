@@ -30,7 +30,7 @@
           <t class="inline-element">Título</t>
           <input type="text" name="post-title" required value="<?php if(isset($_GET['id'])) echo $title; ?>">
           <t class="inline-element">Imágen</t>
-          <input type="file" name="post-image" accept="image/*" <?php if(!isset($_GET['id'])) echo 'required'; ?>><br>
+          <input type="file" name="post-image" accept=".jpg" <?php if(!isset($_GET['id'])) echo 'required'; ?>><br>
           <t>Descripción</t>
           <textarea rows="5" cols="87" name="post-description" required><?php if(isset($_GET['id'])) echo $description; ?></textarea>
           <t>Contenido</t>

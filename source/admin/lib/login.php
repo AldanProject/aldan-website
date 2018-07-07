@@ -6,37 +6,49 @@ include("../../lib/sql-connection.php");
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$query = $connection->prepare("SELECT * FROM users WHERE username = ? AND password = md5(?)");
-$query->bind_param("ss", $username, $password);
-$query->execute();
-$result = $query->get_result();
-
-if(!$result)
+$query = $connection->prepare("SELECT username, level FROM users WHERE username = ? AND password = SHA2(?, 256)");
+if($query == false)
 {
-  header("Location: ../index.php?e=1");
+  die('pepare() failed: ' . htmlspecialchars($connection->error));
 }
 else
 {
-  $num = mysqli_num_rows($result);
-  if($num > 0)
+  $query->bind_param('ss', $username, $password);
+  $query->execute();
+  $result = $query->get_result();
+  if(!$result)
   {
-    $row = mysqli_fetch_array($result);
-    login($row);
+    header("Location: ../index.php?e=1");
   }
   else
   {
-    die(mysqli_error($connection));
-    header("Location: ../index.php?e=2");
+    $num = mysqli_num_rows($result);
+    if($num > 0)
+    {
+      $row = mysqli_fetch_array($result);
+      login($row);
+    }
+    else
+    {
+      die(mysqli_error($connection));
+      header("Location: ../index.php?e=2");
+    }
   }
 }
 
 function login($user)
 {
-  //Session starts here
-  session_start();
-  $_SESSION['username'] = $user['username'];
+  if($user['level'] == 1)
+  {
+    //Session starts here
+    session_start();
+    $_SESSION['username'] = $user['username'];
+    $_SESSION['level'] = $user['level'];
 
-  header("Location: ../panel.php");
+    header("Location: ../panel.php");
+  }
+  else
+    header("Location: ../index.php?e=2");
 }
 
 ?>

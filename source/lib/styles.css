@@ -2,15 +2,16 @@
 
 /* Navbar */
 ul.main-menu {
-  list-style: none;
-  margin: auto;
-  padding: 0;
-  overflow: hidden;
   background-color: #444444;
-  width: 80vw; /* Navbar size/width */
-  text-align: center;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.30);
+  list-style: none;
+  margin: auto;
+  min-width: 1200px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  width: 80%; /* Navbar size/width */
 }
 
 ul.main-menu li {
@@ -38,23 +39,31 @@ ul.main-menu li a:hover {
   background-color: #5A5A5A;
 }
 
+.logo-link {
+  min-width: 1200px;
+}
+
 img.logo {
   display: block;
   width: 520px;
   margin: 0px auto 10px auto;
+  filter: contrast(0.8);
   transition: 0.25s;
 }
 
 img.logo:hover {
-  filter: drop-shadow(0px 0px 5px blue);
+  filter: contrast(1);
 }
 /* Navbar */
 
 /* Body */
-body {
+body, html {
   background-color: #313131;
-  overflow: auto;
-  margin-top: 0px;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
 }
 
 body.blog p.message {
@@ -63,7 +72,7 @@ body.blog p.message {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 80vw; /* Message size */
+  width: 80%; /* Message size */
   font-size: 120%;
 }
 
@@ -79,7 +88,7 @@ body.blog p.message a:hover {
 
 h1 {
   margin-top: 10px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   text-align: center;
   color: #D906D3;
   font-family: 'Poppins', sans-serif;
@@ -93,11 +102,12 @@ hr {
 
 /* Article */
 div.post.main {
- width: 80vw; /* Article size/width */
- margin-left: auto;
- margin-right: auto;
  border-radius: 15px;
  box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.30);
+ margin-left: auto;
+ margin-right: auto;
+ min-width: 1200px;
+ width: 80%; /* Article size/width */
 }
 
 div.post article {
@@ -106,13 +116,13 @@ div.post article {
 
 div.post article:first-child {
   margin-top: 10px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 div.post article:last-child {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   border-bottom: none;
 }
 
@@ -210,15 +220,14 @@ article.simple-article p.date, article.post p.date {
 
 /* Footer */
 footer, div.about {
-  width: 80vw; /* Footer size */
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  overflow: auto;
-  margin-top: 10px;
   background-color: #444444;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.30);
+  display: block;
+  margin: 10px auto;
+  min-width: 1200px;
+  overflow: auto;
+  width: 80%; /* Footer size */
 }
 footer p {
   color: white;
@@ -229,15 +238,16 @@ footer p {
 
 /* Post */
 article.post {
-  width: 80vw; /* Acticle size/width */
-  margin-left: auto;
-  margin-right: auto;
-  overflow: auto;
   background-color: #494949;
   border-radius: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
   box-shadow: 0px 0px 5px 2px rgba(255,255,255,0.30);
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  min-width: 1200px;
+  overflow: auto;
+  width: 80%; /* Acticle size/width */
 }
 
 article.post h2 {
@@ -288,8 +298,8 @@ article.post p a:hover, center a:hover {
 
 /* Login */
 html.login, body.login {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     background-color: #333;
 }
@@ -594,7 +604,7 @@ form.delete button:hover {
 /* Sarch box */
 
 /* About */
-div.about h2, div.about h3 {
+div.about h1, div.about h2 {
   font-family: 'Comfortaa', sans-serif;
   color: white;
   font-weight: bold;
@@ -605,17 +615,17 @@ div.about h2, div.about h3 {
 }
 
 div.about h2 {
-  font-size: 250%;
+  font-size: 1.5em;
 }
 
 div.about h3 {
-  font-size: 200%;
+  font-size: 1.2em;
 }
 
 div.about h4 {
   color: white;
   font-family: 'Poppins', sans-serif;
-  font-size: 150%;
+  font-size: 1.3em;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -627,9 +637,10 @@ div.about h4 a:hover {
 }
 
 div.about p {
-  margin: auto 50px auto 50px;
   color: white;
   font-family: 'Montserrat', arial;
+  font-size: 1em;
+  margin: auto 50px auto 50px;
   text-align: justify;
 }
 
@@ -701,16 +712,44 @@ ul.links li img {
 div.members p.description {
   margin: auto;
 }
+
+.adjust {
+  text-align: justify;
+  margin-right: 40px !important;
+}
 /* About */
 
+/* Game */
+#game-video {
+  float: right;
+  width: 480px;
+  height: 270px;
+  margin: 0px 10px 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+.game p.description {
+  margin: 10px 15px;
+}
+
+.game p.download {
+  margin: 20px auto 0 auto;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.logo-game {
+  width: 500px;
+  height: 90px;
+  margin: 0 auto;
+}
+/* Game */
+
 /* Media */
-@media (max-width: 1270px) {
-  ul.main-menu,
-  body.blog p.message,
-  footer,
-  div.post.main,
-  article.post,
-  div.about  {
-    width: 95vw;
+@media (max-width: 1270px)
+{
+  body {
+    overflow-x: auto;
   }
 }

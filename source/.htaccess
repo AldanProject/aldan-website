@@ -1,1 +1,9 @@
+RewriteEngine on
+
+#Rewrite rules
+RewriteRule ^post/([0-9]+)/?$ post.php?id=$1
+RewriteRule ^about/? about.php
+RewriteRule ^medal-of-darkness/? game.php
+
+#404 not found
 ErrorDocument 404 /aldan-website/source/404.php

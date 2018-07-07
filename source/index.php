@@ -2,6 +2,7 @@
 <!-- Made by Aldan Project | 2018 -->
 <html>
   <head>
+    <?php include("lib/config.php"); ?>
     <meta charset="utf-8">
     <title>Inicio | Aldan Project</title>
     <!-- Styles -->

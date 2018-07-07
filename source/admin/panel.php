@@ -24,9 +24,6 @@
         <h2 class="main">Panel de administración</h2>
         <a href="post.php?new">Nueva publicación</a>
         <a href="search.php">Buscar publicación</a>
-        <h3>Usuarios</h3>
-        <a href="#">Agregar usuario</a>
-        <a href="#">Buscar usuario</a>
         <?php
         if(isset($_GET['m']))
         {
